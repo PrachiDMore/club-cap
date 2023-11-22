@@ -9,7 +9,7 @@ import UserModal from '../Components/UserModal'
 const Users = () => {
 	const [searchUser, setSearchUser] = useState([])
 	const [users, setUsers] = useState([])
-	const [showModal, setShowModal] = useState([])
+	const [showModal, setShowModal] = useState(false)
 
 	useEffect(() => {
 		const q = query(collection(db, "Users"));
