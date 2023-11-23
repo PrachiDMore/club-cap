@@ -23,8 +23,9 @@ const Packages = () => {
 			setSearchPackage(packages);
 		} else {
 			setSearchPackage(packages?.filter((data) => {
-				return data?.title.toLowerCase().includes(e.target.value.toLowerCase()) || data?.author?.includes(e.target.value) 
-			}))
+				return data?.description.toLowerCase().includes(e.target.value.toLowerCase()) || data?.months?.toString()?.includes(e.target.value?.toString().toLowerCase()) || data?.discount?.toString()?.includes(e.target.value?.toString().toLowerCase()) || data?.price?.toString()?.includes(e.target.value?.toString().toLowerCase()) 
+			 
+			})) 
 		}
 	}
 
